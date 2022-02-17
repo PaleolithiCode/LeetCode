@@ -9,7 +9,6 @@ def zigzagConversion(s: str, numRows: int) -> str:
     batch = numRows * 2 - 2
     repeat = int(len(s) / batch)
     remain = len(s) % batch
-    iter = 0
     for iter in range(repeat):
         for i in range(batch):
             idx = iter * batch + i
