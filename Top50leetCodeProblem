@@ -1,10 +1,10 @@
-990     Satisfiability of Equality Equations
-72      Edit Distance
-226     Invert Binary Tree
-329     Longest Increasing Path in a Matrix
-42      Trapping Rain Water
-208     Implement Trie (Prefix Tree)
-1004    Max Consecutive Ones III
+O.990     Satisfiability of Equality Equations 
+O.72      Edit Distance
+O.226     Invert Binary Tree
+O.329     Longest Increasing Path in a Matrix
+O.42      Trapping Rain Water
+O.208     Implement Trie (Prefix Tree)
+O.1004    Max Consecutive Ones III
 895     Maximum Frequency Stack
 871     Minimum Number of Refueling Stops
 992     Subarrays with K Different Integers
