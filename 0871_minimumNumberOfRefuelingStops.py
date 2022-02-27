@@ -1,5 +1,4 @@
-import collections, sys
-
+import collections, sys, heapq
 
 '''
 https://leetcode.com/problems/minimum-number-of-refueling-stops/discuss/613853/Python-5-solutions-gradually-optimizing-from-Naive-DFS-to-O(n)-space-DP
@@ -10,20 +9,23 @@ Original 0-1 knapsack: maximum value given # of bags limitation: dp[i][j] = bool
 Reversed 0-1 knapsack: minimum # of bags used to reach a given value dp[i][j] = value, in former i bags, j # OF BAGS being picked, what is the maximum value.
 In a space-uncompressed dp solution, inner loop's left to right / right to left updating direction doesn't matter when dp[i][j] not related to dp[i][j +/-1] , but the compressed 1-d dp's updating direction matters a lot, because last row's results might be replaced by current row's ones. Check here for anthoer exapmle where updating direction needs to be modified because of space optimization.
 '''
+
+'''
+https://leetcode.com/problems/minimum-number-of-refueling-stops/discuss/149839/DP-O(N2)-and-Priority-Queue-O(NlogN)
+** Best Solution
+'''
 def minRefuelStops(target: int, startFuel: int, stations: list) -> int:
-    full_target = target
-    
-    def dfs(curFuel, start, target):
-        if curFuel >= target:
-            return 0
-        rst = sys.maxsize
-        for i in range(start, len(stations)):
-            dis, fuel = stations[i][0] - (full_target - target), stations[i][1]
-            if curFuel - dis >= 0:
-                rst = min(rst, dfs(curFuel - dis + fuel, i + 1, target - dis) + 1)
-        return rst
-    stops = dfs(startFuel, 0, target)
-    return stops if stops != sys.maxsize else -1
+    pq = []
+    res = i = 0
+    cur = startFuel
+    while cur < target:
+        while i < len(stations) and stations[i][0] <= cur:
+            heapq.heappush(pq, -stations[i][1])
+            i += 1
+        if not pq: return -1
+        cur += -heapq.heappop(pq)
+        res += 1
+    return res
         
 target, startFuel, stations =100, 50, [[25,25],[50,50]] # 1
 # target, startFuel, stations =1, 1, [] # 0

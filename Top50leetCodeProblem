@@ -4,12 +4,12 @@ O.226     Invert Binary Tree
 O.329     Longest Increasing Path in a Matrix
 O.42      Trapping Rain Water
 O.208     Implement Trie (Prefix Tree)
-O.1004    Max Consecutive Ones III
-O.895     Maximum Frequency Stack
-871     Minimum Number of Refueling Stops
-992     Subarrays with K Different Integers
-863     All Nodes Distance K in Binary Tree
-295     Find Median from Data Stream
+*O.1004    Max Consecutive Ones III
+*O.895     Maximum Frequency Stack
+*O.871     Minimum Number of Refueling Stops
+*O.992     Subarrays with K Different Integers
+O.863     All Nodes Distance K in Binary Tree
+O.295     Find Median from Data Stream
 958     Check Completeness of a Binary Tree
 337     House Robber III
 106     Construct Binary Tree from Inorder and Postorder Traversal
