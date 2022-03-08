@@ -13,9 +13,9 @@ O.295     Find Median from Data Stream
 O.958     Check Completeness of a Binary Tree
 O.337     House Robber III
 O.106     Construct Binary Tree from Inorder and Postorder Traversal
-101     Symmetric Tree
-300     Longest Increasing Subsequence
-174     Dungeon Game
+O.101     Symmetric Tree
+O.300     Longest Increasing Subsequence
+O.174     Dungeon Game
 983     Minimum Cost For Tickets
 78      Subsets
 221     Maximal Square
